@@ -1,0 +1,271 @@
+{
+	"x-url": "/api/v1/auditlog/list",
+	"x-method": "get",
+	"summary": "查看操作日志",
+	"x-parent-id": "0",
+	"x-protocol": "http",
+	"x-target-id": "4575429758050436",
+	"x-scan-form": "Python",
+	"x-scan-path": "/Users/apipost/Downloads/vue-fastapi-admin/app/api/v1/auditlog/auditlog.py",
+	"x-mock-server-enable": 1,
+	"x-mark-id": "1",
+	"x-updated-at": "",
+	"x-updated-user-name": "",
+	"x-sort": 0,
+	"x-scripts": {
+		"pre": [
+			{
+				"type": "customScript",
+				"enabled": 1,
+				"data": "",
+				"name": "Script",
+				"id": "0"
+			}
+		],
+		"post": [
+			{
+				"type": "customScript",
+				"enabled": 1,
+				"data": "",
+				"name": "Script",
+				"id": "0"
+			}
+		]
+	},
+	"x-auth": {
+		"type": "inherit",
+		"kv": {
+			"key": "",
+			"value": "",
+			"in": "header"
+		},
+		"bearer": {
+			"key": ""
+		},
+		"basic": {
+			"username": "",
+			"password": ""
+		},
+		"digest": {
+			"username": "",
+			"password": "",
+			"realm": "",
+			"nonce": "",
+			"algorithm": "MD5",
+			"qop": "",
+			"nc": "",
+			"cnonce": "",
+			"opaque": "",
+			"disableRetryRequest": false
+		},
+		"oauth1": {
+			"consumerKey": "",
+			"consumerSecret": "",
+			"signatureMethod": "HMAC-SHA1",
+			"addEmptyParamsToSign": true,
+			"includeBodyHash": true,
+			"addParamsToHeader": false,
+			"realm": "",
+			"version": "1.0",
+			"nonce": "",
+			"timestamp": "",
+			"verifier": "",
+			"callback": "",
+			"tokenSecret": "",
+			"token": "",
+			"disableHeaderEncoding": false
+		},
+		"oauth2": {
+			"addTokenTo": "header",
+			"headerPrefix": "Bearer",
+			"access_token": "",
+			"grant_type": "authorization_code",
+			"redirect_uri": "",
+			"authUrl": "",
+			"accessTokenUrl": "",
+			"clientId": "",
+			"clientSecret": "",
+			"username": "",
+			"password": "",
+			"challengeAlgorithm": "S256",
+			"code_verifier": "Bearer",
+			"scope": "",
+			"state": "",
+			"client_authentication": "header",
+			"refreshTokenUrl": "",
+			"authRequestParams": [],
+			"tokenRequestParams": [],
+			"refreshRequestParams": []
+		},
+		"hawk": {
+			"authId": "",
+			"authKey": "",
+			"algorithm": "",
+			"user": "",
+			"nonce": "",
+			"extraData": "",
+			"app": "",
+			"delegation": "",
+			"timestamp": "",
+			"includePayloadHash": false
+		},
+		"awsv4": {
+			"accessKey": "",
+			"secretKey": "",
+			"region": "",
+			"service": "",
+			"sessionToken": "",
+			"addAuthDataToQuery": false
+		},
+		"ntlm": {
+			"username": "",
+			"password": "",
+			"domain": "",
+			"workstation": "",
+			"disableRetryRequest": false
+		},
+		"edgegrid": {
+			"accessToken": "",
+			"clientToken": "",
+			"clientSecret": "",
+			"nonce": "",
+			"timestamp": "",
+			"baseURi": "",
+			"headersToSign": ""
+		},
+		"noauth": {},
+		"jwt": {
+			"addTokenTo": "header",
+			"algorithm": "HS256",
+			"secret": "",
+			"isSecretBase64Encoded": false,
+			"payload": "",
+			"headerPrefix": "Bearer",
+			"queryParamKey": "token",
+			"header": ""
+		},
+		"asap": {
+			"alg": "HS256",
+			"iss": "",
+			"aud": "",
+			"kid": "",
+			"privateKey": "",
+			"sub": "",
+			"claims": "",
+			"exp": ""
+		}
+	},
+	"description": "",
+	"tags": [],
+	"parameters": [
+		{
+			"name": "page",
+			"in": "query",
+			"required": false,
+			"schema": {
+				"type": "integer",
+				"default": 1
+			},
+			"description": "页码"
+		},
+		{
+			"name": "page_size",
+			"in": "query",
+			"required": false,
+			"schema": {
+				"type": "integer",
+				"default": 10
+			},
+			"description": "每页数量"
+		},
+		{
+			"name": "username",
+			"in": "query",
+			"required": false,
+			"schema": {
+				"type": "string",
+				"default": ""
+			},
+			"description": "操作人名称"
+		},
+		{
+			"name": "module",
+			"in": "query",
+			"required": false,
+			"schema": {
+				"type": "string",
+				"default": ""
+			},
+			"description": "功能模块"
+		},
+		{
+			"name": "method",
+			"in": "query",
+			"required": false,
+			"schema": {
+				"type": "string",
+				"default": ""
+			},
+			"description": "请求方法"
+		},
+		{
+			"name": "summary",
+			"in": "query",
+			"required": false,
+			"schema": {
+				"type": "string",
+				"default": ""
+			},
+			"description": "接口描述"
+		},
+		{
+			"name": "path",
+			"in": "query",
+			"required": false,
+			"schema": {
+				"type": "string",
+				"default": ""
+			},
+			"description": "请求路径"
+		},
+		{
+			"name": "status",
+			"in": "query",
+			"required": false,
+			"schema": {
+				"type": "integer",
+				"default": null
+			},
+			"description": "状态码"
+		},
+		{
+			"name": "start_time",
+			"in": "query",
+			"required": false,
+			"schema": {
+				"type": "string",
+				"format": "datetime",
+				"default": ""
+			},
+			"description": "开始时间"
+		},
+		{
+			"name": "end_time",
+			"in": "query",
+			"required": false,
+			"schema": {
+				"type": "string",
+				"format": "datetime",
+				"default": ""
+			},
+			"description": "结束时间"
+		}
+	],
+	"requestBody": {
+		"x-mode": "none",
+		"content": {
+			"none": {}
+		}
+	},
+	"responses": {}
+}
